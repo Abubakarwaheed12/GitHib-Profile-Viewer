@@ -1,3 +1,6 @@
+
+$('.profile').hide()
+
 $('#search').click(()=>{
  
     inp=$('#input').val()
@@ -15,6 +18,8 @@ $('#search').click(()=>{
             url:`https://api.github.com/users/${inp}`,
             type:'get',
             success:function(response){
+                if(response){
+                $('.profile').show()
                 console.log(response)
                 $('.name').text(response.login)
                 $('#userPUrl').text(response.login)
@@ -28,7 +33,19 @@ $('#search').click(()=>{
                 $('#userPUrl').attr('href' , response.html_url)
                 $('#followers').text(response.followers)
                 $('#following').text(response.following)
+                $('#repo').text(response.public_repos)
+                $('#repo1').text(response.public_gists)
             }
+            else{
+                
+            }
+            },
+
+            error:function(error){
+                console.log(error)
+                $('.profile').hide()
+            }
+
         })
     }
 })
