@@ -3,7 +3,7 @@ $('#search').click(()=>{
     inp=$('#input').val()
 
     console.log('Search Button Clicked')
-    a=$('#name').innerText
+    a=$('#name').text()
     console.log(a)
     if(inp==''){
         console.log('user name is empty')
@@ -16,9 +16,18 @@ $('#search').click(()=>{
             type:'get',
             success:function(response){
                 console.log(response)
-                $('.name').innerText=response.login
-                console.log(a)
-                console.log(response.login)
+                $('.name').text(response.login)
+                $('#userPUrl').text(response.login)
+                if(response.bio){
+                    $('#bio').text(response.bio)
+                }
+                else{
+                    $('#bio').text('no bio')
+                }
+                $('#img').attr('src' , response.avatar_url)
+                $('#userPUrl').attr('href' , response.html_url)
+                $('#followers').text(response.followers)
+                $('#following').text(response.following)
             }
         })
     }
