@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Github Profile Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="search-container">
+        <input
+          type="text"
+          name="Username"
+          id="input"
+          class="input"
+          placeholder="Your Git Username.."
+        />
+        <button id="search" class="search">Search</button>
+      </div>
+      <div class="profile">
+        <div class="img-name">
+          <img
+            src="https://avatars.githubusercontent.com/u/77717512?v=4"
+            alt=""
+            id="img"
+            class="img"
+          /><br />
+          <span class="name" id="name">abubakarwaheed12</span><br />
+          <a class="username" id="username">@abubakarwaheed12</a>
+        </div>
+        <div class="bio" id="bio">FullStack Dev</div>
+        <div class="other">
+          <a id="flwrs-link"><span id="followers">2</span>followers</a>
+          <a id="flwin-link"><span id="following">13</span>following</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
