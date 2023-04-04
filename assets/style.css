@@ -2,13 +2,16 @@ body{
     background: rgba(205, 214, 213, 0.776);
 
 }
-.username{
+.usernames{
   text-align: center;
   color: #fff;
   text-transform: capitalize;
   text-shadow: #000;
   font: 900;
-  font-size: 60px;
+  font-style: italic;
+  font-stretch: extra-expanded;
+  font-size: 42px;
+  padding-top: 50px;
 }
 #repo , #repo1{
   font-size: 20px;
@@ -21,7 +24,7 @@ body{
     left: 0;
     top: 0;
     background-size: 100%;
-    background: rgba(205, 214, 213, 0.776);
+    /* background: rgba(205, 214, 213, 0.776);   */
   }
   .search-container {
     width: 300px;
